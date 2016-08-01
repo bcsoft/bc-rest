@@ -1,0 +1,15 @@
+[submodule "bc-rest-parent"]
+	path = bc-rest-parent
+	url = git@github.com:bcsoft/bc-rest-parent.git
+[submodule "bc-rest-core"]
+	path = bc-rest-core
+	url = git@github.com:bcsoft/bc-rest-core.git
+[submodule "bc-rest-demo"]
+	path = bc-rest-demo
+	url = git@github.com:bcsoft/bc-rest-demo.git
+[submodule "bc-rest-jersey"]
+	path = bc-rest-jersey
+	url = git@github.com:bcsoft/bc-rest-jersey.git
+[submodule "bc-rest-test"]
+	path = bc-rest-test
+	url = git@github.com:bcsoft/bc-rest-test.git
