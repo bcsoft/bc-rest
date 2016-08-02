@@ -1,15 +1,15 @@
-[submodule "bc-rest-parent"]
-	path = bc-rest-parent
+[submodule "impl-jersey"]
+	path = impl-jersey
+	url = git@github.com:bcsoft/bc-rest-impl-jersey.git
+[submodule "parent"]
+	path = parent
 	url = git@github.com:bcsoft/bc-rest-parent.git
-[submodule "bc-rest-core"]
-	path = bc-rest-core
+[submodule "core"]
+	path = core
 	url = git@github.com:bcsoft/bc-rest-core.git
-[submodule "bc-rest-demo"]
-	path = bc-rest-demo
-	url = git@github.com:bcsoft/bc-rest-demo.git
-[submodule "bc-rest-jersey"]
-	path = bc-rest-jersey
-	url = git@github.com:bcsoft/bc-rest-jersey.git
-[submodule "bc-rest-test"]
-	path = bc-rest-test
+[submodule "test"]
+	path = test
 	url = git@github.com:bcsoft/bc-rest-test.git
+[submodule "demo"]
+	path = demo
+	url = git@github.com:bcsoft/bc-rest-demo.git

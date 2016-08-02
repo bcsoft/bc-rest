@@ -6,17 +6,17 @@
 		<groupId>cn.bc.rest</groupId>
 		<artifactId>bc-rest-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath>bc-rest-parent/pom.xml</relativePath>
+		<relativePath>parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>bc-rest</artifactId>
 	<packaging>pom</packaging>
 	<name>bc-rest</name>
 	<modules>
-		<module>bc-rest-parent</module>
-		<module>bc-rest-core</module>
-		<module>bc-rest-test</module>
-		<module>bc-rest-demo</module>
-		<module>bc-rest-jersey</module>
+		<module>parent</module>
+		<module>core</module>
+		<module>test</module>
+		<module>demo</module>
+		<module>impl-jersey</module>
 	</modules>
 	<scm>
 		<connection>scm:git:git@github.com:bcsoft/bc-rest.git</connection>
