@@ -1,9 +1,6 @@
 [submodule "impl-jersey"]
 	path = impl-jersey
 	url = git@github.com:bcsoft/bc-rest-impl-jersey.git
-[submodule "parent"]
-	path = parent
-	url = git@github.com:bcsoft/bc-rest-parent.git
 [submodule "core"]
 	path = core
 	url = git@github.com:bcsoft/bc-rest-core.git
@@ -13,3 +10,6 @@
 [submodule "demo"]
 	path = demo
 	url = git@github.com:bcsoft/bc-rest-demo.git
+[submodule "bom"]
+	path = bom
+	url = https://github.com/bcsoft/bc-rest-bom.git
