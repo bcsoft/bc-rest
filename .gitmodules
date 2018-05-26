@@ -10,6 +10,3 @@
 [submodule "demo"]
 	path = demo
 	url = git@github.com:bcsoft/bc-rest-demo.git
-[submodule "bom"]
-	path = bom
-	url = https://github.com/bcsoft/bc-rest-bom.git
