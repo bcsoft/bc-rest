@@ -5,39 +5,50 @@
 	<parent>
 		<groupId>cn.bc</groupId>
 		<artifactId>bc-parent</artifactId>
-		<version>3.2-SNAPSHOT</version>
+		<version>${revision}</version>
+		<relativePath>../bc-parent</relativePath>
 	</parent>
 	<groupId>cn.bc.rest</groupId>
 	<artifactId>bc-rest-parent</artifactId>
 	<name>bc-rest-parent</name>
-	<version>1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<description>BC Rest Parent</description>
 	<modules>
-		<module>bom</module>
 		<module>core</module>
 		<module>impl-jersey</module>
 		<module>test</module>
 		<module>demo</module>
 	</modules>
+	<url>https://github.com/bcsoft/bc-rest</url>
+	<organization>
+		<name>bcsoft</name>
+		<url>https://github.com/bcsoft</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>RJ.Hwang</name>
+			<email>rongjihuang@gmail.com</email>
+		</developer>
+	</developers>
 	<scm>
-		<connection>scm:git:git@github.com:bcsoft/bc-rest.git</connection>
-		<developerConnection>scm:git:git@github.com:bcsoft/bc-rest.git</developerConnection>
-		<url>https://github.com/bcsoft/bc-rest</url>
+		<url>https://github.com/bcsoft/bc-rest.git</url>
 	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/bcsoft/bc-rest/issues</url>
+	</issueManagement>
 	<properties>
 		<jersey.version>2.23.1</jersey.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<!-- BC Rest BOM-->
-			<dependency>
-				<groupId>cn.bc.rest</groupId>
-				<artifactId>bc-rest-bom</artifactId>
-				<version>${project.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-
 			<!-- JAX-RS implementation: Jersey -->
 			<dependency>
 				<groupId>org.glassfish.jersey</groupId>
@@ -70,4 +81,43 @@
 			<artifactId>genson</artifactId>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<id>flatten</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>flatten</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<flattenedPomFilename>flattened-pom.xml</flattenedPomFilename>
+							<updatePomFile>true</updatePomFile>
+							<flattenMode>clean</flattenMode>
+							<pomElements>
+								<parent>resolve</parent>
+								<properties>interpolate</properties>
+								<dependencyManagement>keep</dependencyManagement>
+								<pluginManagement>keep</pluginManagement>
+								<name>resolve</name>
+								<description>resolve</description>
+								<profiles>keep</profiles>
+								<dependencies>keep</dependencies>
+								<organization>keep</organization>
+								<url>keep</url>
+								<developers>keep</developers>
+								<scm>keep</scm>
+								<issueManagement>keep</issueManagement>
+							</pomElements>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
