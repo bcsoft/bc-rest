@@ -46,9 +46,9 @@
   </issueManagement>
   <properties>
     <!-- 2.27(2018-04-10), 2.26(2017-09-05), 2.25.1(2017-01-20), 2.25(2016-12-08), 2.23.2(2016-08-09), 2.23.1(2016-06-10) -->
-    <jersey.version>2.25.1</jersey.version>
+    <jersey.version>2.27</jersey.version>
     <!-- 从 jersey26+ 开始改为 jersey-spring4，更低版本为 jersey-spring3 -->
-    <jersey-springX>jersey-spring3</jersey-springX>
+    <jersey-springX>jersey-spring4</jersey-springX>
   </properties>
   <dependencyManagement>
     <dependencies>
